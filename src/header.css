@@ -1,0 +1,65 @@
+.header{
+    grid-column: 1/-1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 60vh;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(90deg, rgba(4,191,69,0.7) 22%, rgba(63,140,90,0.7) 69%), url("./bg-header-card.jpg");;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, rgba(4,191,69,0.7) 22%, rgba(63,140,90,0.7) 69%), url("./bg-header-card.jpg");; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title{
+    color: #EBEDF2;
+    font-weight: 300;
+    font-size: 3.5rem;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header{
+        height: auto;
+    }
+
+    nav{
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav a{
+        margin: auto;
+    }
+
+    .title, .subtitle{
+        margin: 40px auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 601px and up) */
+@media only screen and (min-width: 601px) {
+    .header{
+        height: auto;
+    }
+
+    .title, .subtitle{
+        margin: 40px 60px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .title, .subtitle{
+        margin: 60px auto;
+    }
+}
