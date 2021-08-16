@@ -7,11 +7,11 @@ const useStyles = makeStyles({
     btn:{
         height: 40,
         width: 40,
-        backgroundColor: "#f2f2f2",
+        //backgroundColor: "#f2f2f2",
         color: "#04bf45",
         position: "absolute",
-        bottom: 5,
-        left: 10,
+        bottom: 10,
+        left: 20,
         transition: "all 0.4s ease-in",
         zIndex: 10,
         '&:hover': {
@@ -22,9 +22,10 @@ const useStyles = makeStyles({
 })
 
 //styles es una funcion
-export default function DoneButton(){
+export default function DeleteButton({deleteCard}){
     const classes = useStyles();
-    return (<IconButton className={classes.btn}>
+
+    return (<IconButton className={classes.btn} onClick={deleteCard}>
                 <DeleteIcon  />
             </IconButton>
     );

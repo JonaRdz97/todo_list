@@ -6,8 +6,8 @@ const EmptyDataAdvice = () => {
         containerAdvice: {
             margin: 0,
             paddin: 0,
-            //width: "100%",
-            //height: "calc(100%  100px)",
+            width: "100%",
+            height: "auto",
             gridColumn: "1/-1",
             display: "flex",
             justifyContent: "center",
@@ -23,7 +23,7 @@ const EmptyDataAdvice = () => {
         description: {
             padding: 10,
             fontWeight: 400,
-            fontSize: "1.3rem",
+            fontSize: "1.1rem",
             textAlign: "center",
             color: "#262626"
         }

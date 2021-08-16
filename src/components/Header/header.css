@@ -1,15 +1,14 @@
 .header{
-    grid-column: 1/-1;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    min-height: 60vh;
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(90deg, rgba(4,191,69,0.7) 22%, rgba(63,140,90,0.7) 69%), url("./bg-header-card.jpg");;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(90deg, rgba(4,191,69,0.7) 22%, rgba(63,140,90,0.7) 69%), url("./bg-header-card.jpg");; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 50vh;
+    background: #04bf45;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(90deg, rgba(4,191,69,0.7) 22%, rgba(63,140,90,0.7) 69%), url("../../bg-header-card.jpg");;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, rgba(4,191,69,0.7) 22%, rgba(63,140,90,0.7) 69%), url("../../bg-header-card.jpg");; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;

@@ -8,7 +8,7 @@
 .cards-container{
   height: auto;
   width: auto;
-  margin: 80px 5%;
+  margin: 40px 5%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
@@ -17,20 +17,21 @@
 
 .status{
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 15px;
+  right: 20px;
   height: 25px;
   min-width: 60px;
 }
 
 .status span{
+  font-size: .9rem;
   border-radius: 5px;
   padding: 10px;
   color: #f2f2f2;
 }
 
 .in-process{
-  background: #255955;
+  background: #6E17BF;
 }
 
 .finished{
@@ -51,15 +52,15 @@
 }
 
 .baja{
-  color: #6E17BF;
+  color: #17BF52;
 }
 
 .media{
-  color: #BF7D17;
+  color: #BF9D0D;
 }
 
 .alta{
-  color: #BF0A04;
+  color: #BF1D17;
 }
 
 @keyframes animationCard {

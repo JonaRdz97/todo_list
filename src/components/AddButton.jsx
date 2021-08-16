@@ -20,10 +20,9 @@ const useStyles = makeStyles({
 
 export default function AddButton({addCard}){
     const classes = useStyles();
-
-    return <Fab onClick={addCard} className={classes.addBtn} color="primary" aria-label="add">
-                <AddIcon />
-            </Fab>
-
-    /*return <button onClick={addCard} style={styles.addBtn} type="button"><img style={styles.imgStyles} src="/img/add-icon.svg" alt="icono agregar"/></button>*/
+    return (<div>
+                <Fab onClick={addCard} className={classes.addBtn} color="primary" aria-label="add">
+                    <AddIcon />
+                </Fab>
+            </div>);
 }
