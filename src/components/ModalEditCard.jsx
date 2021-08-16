@@ -89,13 +89,14 @@ export default function ModalEditCard({idCard}) {
       setName(event.target.value);
   }
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+      e.preventDefault();
       dispatch(updateCard({id: idCard, title: name, prioridad: priority, active: status}))
       handleClose();
   }
 
   const body = (
-    <div className={classes.paper}>
+    <form className={classes.paper} noValidate onSubmit={handleClick} autoComplete="off">
       <h2 id="simple-modal-title">Editar Tarea</h2>
       <TextField onChange={handleChangeName} className={classes.formControl} id="simple-modal-outlined-basic" label="Nombre" variant="outlined" defaultValue={name}/>
       <FormControl className={classes.formControl} variant="outlined">
@@ -127,8 +128,8 @@ export default function ModalEditCard({idCard}) {
           <MenuItem value={false}>Terminada</MenuItem>
         </Select>
       </FormControl>
-      <button className={classes.btnCreate} onClick={handleClick}>Actualizar</button>
-    </div>
+      <button className={classes.btnCreate}>Actualizar</button>
+    </form>
   );
 
   return (

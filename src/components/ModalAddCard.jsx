@@ -83,7 +83,8 @@ export default function ModalAddCard() {
       setName(event.target.value);
   }
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+      e.preventDefault();
       const list = [...tasks, {id: currentID, title: name, prioridad: priority, active: status}]
       dispatch(setToDoCards(list));
       dispatch(incrementID(currentID));
@@ -91,7 +92,7 @@ export default function ModalAddCard() {
   }
 
   const body = (
-    <div className={classes.paper}>
+    <form className={classes.paper} noValidate onSubmit={handleClick} autoComplete="off">
       <h2 id="simple-modal-title">Crear una Tarea</h2>
       <TextField onChange={handleChangeName} className={classes.formControl} id="simple-modal-outlined-basic" label="Nombre" variant="outlined"/>
       <FormControl className={classes.formControl} variant="outlined">
@@ -123,8 +124,8 @@ export default function ModalAddCard() {
           <MenuItem value={false}>Terminada</MenuItem>
         </Select>
       </FormControl>
-      <button className={classes.btnCreate} onClick={handleClick}>Crear</button>
-    </div>
+      <button className={classes.btnCreate}>Crear</button>
+    </form>
   );
 
   return (
